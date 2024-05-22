@@ -1,0 +1,15 @@
+h1 {
+    display: none;
+    text-align: center;
+}
+
+.testDivs {
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.testHeader {
+    text-align: center;
+    text-decoration: underline;
+}
