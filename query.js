@@ -46,7 +46,7 @@ $(document).ready(function(){
             parent.find("p:first").text("New First Paragraph");
             parent.find("p:last").text("New Second Paragraph");
             $(".fourthTestButton").parent().fadeIn(1000); 
-        }, 1000);
+        }, 900);
 
         setTimeout(() => {
             parent.find('p:last').after('<p>Really, really easy</p><br>');
@@ -56,10 +56,16 @@ $(document).ready(function(){
         }, 5000);
     });
 
-    $("fifthTestButton").hover(function() {
+    $(".fifthTestButton").one('mouseenter',function() {
+        const parent = $(this).parent();
+            parent.find("h4").text("What would you like?");
+            parent.find("h4").append("<br><button>Fade Things?</button>");
+            parent.find("h4").append("<br><button>Replace Things?</button>");
+        });
+        
         // make the text morph into 'What would you like?'
+
         // then make other stuff happen
-    })
 
 
 
