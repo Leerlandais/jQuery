@@ -13,3 +13,7 @@ h1 {
     text-align: center;
     text-decoration: underline;
 }
+
+.testButtons {
+    opacity: 0.5;
+}
