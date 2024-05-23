@@ -26,7 +26,7 @@ $(document).ready(function(){       // maybe not needed but does the same as doc
 
 
     $(".thirdTestButton").on("click", function() {
-        $(".thirdTestButton").parent().fadeOut(1000); 
+        $(".thirdTestButton").parent().fadeOut(1010); 
         const parent = $(this).parent();
         setTimeout(() => {
             parent.find("p:first").text("New First Paragraph");
@@ -56,12 +56,16 @@ $(document).ready(function(){       // maybe not needed but does the same as doc
         }, 5000);
     });
 
+
+
     $(".fifthTestButton").one('mouseenter',function() { // nice! same as .on but only do it once. jQ thought of everything (I was going to write a function to handle that)
         const parent = $(this).parent();
         $(".fifthTestButton").hide();
             parent.find("h4").text("What would you like?");
             parent.find("h4").append("<br><button>Fade Things?</button>");
             parent.find("h4").append("<br><button>Replace Things?</button>");
+
+            
         });
         
         // make the text morph into 'What would you like?'
@@ -78,6 +82,11 @@ $(document).ready(function(){       // maybe not needed but does the same as doc
 
 
 
+
+            $("#presentation").hide();
+            $(window).scroll(function() {
+            $("#presentation").fadeIn(2000);
+          });
 
 
 
